@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://noualali.github.io/portfolio/sitemap.xml
