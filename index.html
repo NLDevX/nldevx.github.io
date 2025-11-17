@@ -147,7 +147,7 @@
     </div>
 
     <!-- Header -->
-    <header role="banner" itemprop="mainEntity" itemscope itemtype="https://schema.org/Person">
+    <header role="banner">
         <nav class="navbar" role="navigation" aria-label="Navigation principale">
             <div class="navbar__container">
                 <!-- Logo avec microdata -->
@@ -159,27 +159,27 @@
 
                 <ul class="navbar__menu" role="menubar" aria-label="Menu principal">
                     <li class="navbar__item" role="none">
-                        <a href="#about" class="navbar__link" role="menuitem" itemprop="knowsAbout">
+                        <a href="#about" class="navbar__link" role="menuitem">
                             <span class="navbar__link-text">À propos</span>
                         </a>
                     </li>
                     <li class="navbar__item" role="none">
-                        <a href="#projects" class="navbar__link" role="menuitem" itemprop="worksOn">
+                        <a href="#projects" class="navbar__link" role="menuitem">
                             <span class="navbar__link-text">Projets</span>
                         </a>
                     </li>
                     <li class="navbar__item" role="none">
-                        <a href="#skills" class="navbar__link" role="menuitem" itemprop="knowsAbout">
+                        <a href="#skills" class="navbar__link" role="menuitem">
                             <span class="navbar__link-text">Compétences</span>
                         </a>
                     </li>
                     <li class="navbar__item" role="none">
-                        <a href="#experience" class="navbar__link" role="menuitem" itemprop="hasOccupation">
+                        <a href="#experience" class="navbar__link" role="menuitem">
                             <span class="navbar__link-text">Expérience</span>
                         </a>
                     </li>
                     <li class="navbar__item" role="none">
-                        <a href="#contact" class="navbar__link" role="menuitem" itemprop="contactPoint">
+                        <a href="#contact" class="navbar__link" role="menuitem">
                             <span class="navbar__link-text">Contact</span>
                         </a>
                     </li>
@@ -240,7 +240,7 @@
     </header>
 
     <!-- Main content -->
-    <main id="main-content" role="main" itemprop="mainContentOfPage">
+    <main id="main-content" role="main" itemscope itemtype="https://schema.org/Person" itemprop="mainEntity">
         <!-- Hero Section -->
         <section id="landing" class="hero" itemtype="https://schema.org/ProfilePage">
             <div class="hero__content">
@@ -270,7 +270,7 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="section" itemprop="knowsAbout" itemscope itemtype="https://schema.org/AboutPage">
+        <section id="about" class="section" itemscope itemtype="https://schema.org/AboutPage">
             <div class="container">
                 <h2 class="section__title animate-on-scroll">À propos</h2>
                 <div class="about__content">
@@ -308,14 +308,14 @@
                             utilisateur optimale.
                         </p>
                         <div class="about__skills">
-                            <span class="about__skill-tag" itemprop="knowsAbout">Laravel</span>
-                            <span class="about__skill-tag" itemprop="knowsAbout">PHP</span>
-                            <span class="about__skill-tag" itemprop="knowsAbout">MySQL</span>
-                            <span class="about__skill-tag" itemprop="knowsAbout">API REST</span>
-                            <span class="about__skill-tag" itemprop="knowsAbout">Architecture logicielle</span>
-                            <span class="about__skill-tag" itemprop="knowsAbout">Optimisation</span>
-                            <span class="about__skill-tag" itemprop="knowsAbout">Sécurité</span>
-                            <span class="about__skill-tag" itemprop="knowsAbout">DevOps</span>
+                            <span class="about__skill-tag">Laravel</span>
+                            <span class="about__skill-tag">PHP</span>
+                            <span class="about__skill-tag">MySQL</span>
+                            <span class="about__skill-tag">API REST</span>
+                            <span class="about__skill-tag">Architecture logicielle</span>
+                            <span class="about__skill-tag">Optimisation</span>
+                            <span class="about__skill-tag">Sécurité</span>
+                            <span class="about__skill-tag">DevOps</span>
                         </div>
                     </div>
                 </div>
@@ -323,7 +323,7 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="section" itemprop="worksOn" itemscope itemtype="https://schema.org/ItemList">
+        <section id="projects" class="section" itemscope itemtype="https://schema.org/ItemList">
             <div class="container">
                 <h2 class="section__title animate-on-scroll">Projets Phares</h2>
                 <div class="projects__grid">
@@ -403,7 +403,7 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="section" itemprop="knowsAbout" itemscope itemtype="https://schema.org/ItemList">
+        <section id="skills" class="section" itemscope itemtype="https://schema.org/ItemList">
             <div class="container">
                 <h2 class="section__title animate-on-scroll">Compétences Techniques</h2>
                 <div class="skills__container">
@@ -520,8 +520,7 @@
         </section>
 
         <!-- Experience Section -->
-        <section id="experience" class="section" itemprop="hasOccupation" itemscope
-            itemtype="https://schema.org/ItemList">
+        <section id="experience" class="section" itemscope itemtype="https://schema.org/ItemList">
             <div class="container">
                 <h2 class="section__title animate-on-scroll">Parcours Professionnel</h2>
                 <div class="timeline">
@@ -531,10 +530,11 @@
                         <div class="timeline__header">
                             <div class="timeline__company">
                                 <img src="/portfolio/assets/brands/skaalab_logo.webp"
-                                    alt="SKAALAB - Logo de l'entreprise" width="42" height="42" loading="lazy"
-                                    itemprop="image">
+                                    alt="SKAALAB - Logo de l'entreprise" width="42" height="42" loading="lazy">
                             </div>
-                            <h3 class="timeline__title" itemprop="roleName">SKAALAB - Ingénieur informatique</h3>
+                            <h3 class="timeline__title">
+                                <span itemprop="roleName">Ingénieur informatique - SKAALAB</span>
+                            </h3>
                         </div>
                         <time class="timeline__date" datetime="2024-06/2025-10" itemprop="startDate">Juin 2024 - Octobre
                             2025</time>
@@ -546,12 +546,10 @@
                         <div class="timeline__header">
                             <div class="timeline__company">
                                 <img src="/portfolio/assets/brands/bnalgerie_logo.webp"
-                                    alt="Banque Nationale d'Algérie - Logo" width="42" height="42" loading="lazy"
-                                    itemprop="image">
+                                    alt="Banque Nationale d'Algérie - Logo" width="42" height="42" loading="lazy">
                             </div>
-                            <h3 class="timeline__title" itemprop="worksFor" itemscope
-                                itemtype="https://schema.org/Organization">
-                                <span itemprop="name">Banque Nationale d'Algérie</span>
+                            <h3 class="timeline__title">
+                                <span itemprop="roleName">Banque Nationale d'Algérie</span>
                             </h3>
                         </div>
                         <div class="timeline__group-items">
@@ -561,7 +559,8 @@
                                     <h4 class="timeline__title" itemprop="roleName">Chef de secteur central (DCP)</h4>
                                 </div>
                                 <time class="timeline__date" datetime="2023-09/2024-08" itemprop="startDate">Septembre
-                                    2023 - Août 2024</time>
+                                    2023 - Août
+                                    2024</time>
                             </article>
                             <article class="timeline__subitem animate-on-scroll" itemprop="itemListElement" itemscope
                                 itemtype="https://schema.org/OrganizationRole">
@@ -569,7 +568,8 @@
                                     <h4 class="timeline__title" itemprop="roleName">Analyste informatique (DRCP)</h4>
                                 </div>
                                 <time class="timeline__date" datetime="2022-12/2023-08" itemprop="startDate">Décembre
-                                    2022 - Août 2023</time>
+                                    2022 - Août
+                                    2023</time>
                             </article>
                         </div>
                     </article>
@@ -580,11 +580,11 @@
                         <div class="timeline__header">
                             <div class="timeline__company">
                                 <img src="/portfolio/assets/brands/ecferal_logo.webp"
-                                    alt="ECFERAL - Logo de l'entreprise" width="42" height="42" loading="lazy"
-                                    itemprop="image">
+                                    alt="ECFERAL - Logo de l'entreprise" width="42" height="42" loading="lazy">
                             </div>
-                            <h3 class="timeline__title" itemprop="roleName">ECFERAL - Technicien supérieur en
-                                informatique</h3>
+                            <h3 class="timeline__title">
+                                <span itemprop="roleName">Technicien supérieur en informatique - ECFERAL</span>
+                            </h3>
                         </div>
                         <time class="timeline__date" datetime="2021-09/2022-08" itemprop="startDate">Septembre 2021 -
                             Août 2022</time>
@@ -594,35 +594,30 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="section" itemprop="contactPoint" itemscope
-            itemtype="https://schema.org/ContactPage">
+        <section id="contact" class="section" itemscope itemtype="https://schema.org/ContactPage">
             <div class="container">
                 <h2 class="section__title animate-on-scroll">Contact</h2>
                 <div class="contact__content">
                     <div class="contact__info animate-on-scroll">
                         <!-- Email -->
-                        <div class="contact__item" itemprop="address" itemscope
-                            itemtype="https://schema.org/PostalAddress">
+                        <div class="contact__item">
                             <img src="/portfolio/assets/icons/email.svg" alt="" class="contact__icon" aria-hidden="true"
                                 width="40" height="40">
                             <div>
                                 <h4>Email</h4>
-                                <a href="mailto:noualdev@gmail.com" class="contact__link" itemprop="email"
-                                    aria-label="Envoyer un email à noualdev@gmail.com">
+                                <a href="mailto:noualdev@gmail.com" class="contact__link">
                                     noualdev@gmail.com
                                 </a>
                             </div>
                         </div>
 
                         <!-- Phone -->
-                        <div class="contact__item" itemprop="telephone" itemscope
-                            itemtype="https://schema.org/ContactPoint">
+                        <div class="contact__item">
                             <img src="/portfolio/assets/icons/phone.svg" alt="" class="contact__icon" aria-hidden="true"
                                 width="40" height="40">
                             <div>
                                 <h4>Téléphone</h4>
-                                <a href="tel:+213783406026" class="contact__link" itemprop="telephone"
-                                    aria-label="Appeler le numéro +213 783 406 026">
+                                <a href="tel:+213783406026" class="contact__link">
                                     +213 783 406 026
                                 </a>
                             </div>
@@ -727,7 +722,7 @@
                 &copy; <time id="copyYear" datetime="" itemprop="copyrightYear"></time>
                 <span itemprop="copyrightHolder">Ali Noual</span>. Tous droits réservés.
             </p>
-            <p class="footer__highlight" itemprop="availability">Disponible pour de nouvelles opportunités</p>
+            <p class="footer__highlight">Disponible pour de nouvelles opportunités</p>
         </div>
     </footer>
 
