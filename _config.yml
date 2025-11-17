@@ -7,7 +7,16 @@ plugins:
 # Forcer le type MIME pour les fichiers XML
 defaults:
   - scope:
-      path: "sitemap.xml"
+      path: "portfolio/sitemap.xml"
     values:
       layout: null
       sitemap: true
+
+headers:
+  - cache-control: max-age=31536000
+    files:
+      - "*.css"
+      - "*.js"
+      - "*.webp"
+      - "*.png"
+      - "*.jpg"
