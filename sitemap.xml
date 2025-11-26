@@ -3,10 +3,10 @@
 
   <!-- Page d'accueil principale -->
   <url>
-    <loc>https://noualali.github.io/</loc>
+    <loc>https://nldevx.com/</loc>
     <lastmod>2025-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://noualali.github.io/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nldevx.com/" />
   </url>
 </urlset>
